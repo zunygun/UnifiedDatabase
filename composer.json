@@ -1,0 +1,17 @@
+{
+    "name": "wapmorgan/unified-database",
+    "description": "Unified interface to simple database files (dbase - .dbf, paradox - .db, filepro and .csv)",
+    "license": "MIT",
+    "keywords": ["database", "dbase", "paradox", "filepro", "csv"],
+    "suggest": {
+        "ext-filepro": "Reading filePro databases",
+        "ext-dbase": "Reading .dbf databases",
+        "ext-paradox": "Reading .db databases"
+    },
+    "autoload": {
+        "psr-4": {
+            "wapmorgan\\UnifiedDatabase\\": "src/"
+        },
+        "files": ["src/functions.php"]
+    }
+}
