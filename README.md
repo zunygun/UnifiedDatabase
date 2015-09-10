@@ -1,6 +1,8 @@
 # UnifiedDatabase
 Unified interface to simple database files (dbase, paradox, filepro and csv).
 
+[![Latest Stable Version](https://poser.pugx.org/wapmorgan/unified-database/v/stable)](https://packagist.org/packages/wapmorgan/unified-database) [![Latest Unstable Version](https://poser.pugx.org/wapmorgan/unified-database/v/unstable)](https://packagist.org/packages/wapmorgan/unified-database) [![License](https://poser.pugx.org/wapmorgan/unified-database/license)](https://packagist.org/packages/wapmorgan/unified-database)
+
 Supported databases:
 * DBase format (*.dbf files) - `UnifiedDatabase::DBASE`
 * Paradox format (*.db files) - `UnifiedDatabase::PARADOX`
