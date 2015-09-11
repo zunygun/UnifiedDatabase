@@ -28,7 +28,7 @@ Supported databases:
         * `name`
         * `type` (not present in csv)
         * `size` (not present in csv)
-    * `array getRecord($position)`
+    * `array getRow($position)`
     Returns array with record fields data
 
 ## Example of usage
@@ -36,7 +36,7 @@ Supported databases:
 $db = UnifiedDatabase::open($file, UnifiedDatabase::detectFormat($file));
 $total = $db->getNumberOfRows();
 for ($i = 0; $i < $total; $i++) {
-    $row = $db->getRecord($i);
+    $row = $db->getRow($i);
     echo implode(', ', $row).PHP_EOL;
 }
 ```
