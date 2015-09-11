@@ -10,42 +10,33 @@ Supported databases:
 * CSV format (*.csv files) - `UnifiedDatabase::CSV`
 
 ## API
-```php
-__construct($filename, $format)
+
+* **UnifiedDatabase**
+    * *static* `open($filename, $format): AbstractDatabase`
+    Creates a new object implementing `AbstractDatabase` interface.
+
+    * *static* `detectFormat($filename): string`
+    Detects format of a database by its filename or content.
+
+* **AbstractDatabase**
+    * `int getNumberOfRows()`
+    Returns number of records in database
+    * `int getNumberOfFields()`
+    Returns number of fields in database
+    * `array getFields()`
+    Returns fields information. Each element is an object with following properties:
+        * `name`
+        * `type` (not present in csv)
+        * `size` (not present in csv)
+    * `array getRecord($position)`
+    Returns array with record fields data
+
+## Example of usage
+``` php
+$db = UnifiedDatabase::open($file, UnifiedDatabase::detectFormat($file));
+$total = $db->getNumberOfRows();
+for ($i = 0; $i < $total; $i++) {
+    $row = $db->getRecord($i);
+    echo implode(', ', $row).PHP_EOL;
+}
 ```
-
-Creates a new UnifiedDatabase object
-
-```php
-int getNumberOfRows()
-```
-
-Returns number of records in database
-
-```php
-int getNumberOfFields()
-```
-
-Returns number of fields in database
-
-```php
-array getFields()
-```
-
-Returns fields information. Each element is an object with following properties:
-
-* `name`
-* `type` (not present in csv)
-* `size` (not present in csv)
-
-```php
-array getRecord($position)
-```
-
-Returns array with record fields data
-
-### Static methods
-```php
-format detectFormat($filename)
-```
-Tries to detect format by file content. Returns format as one of constants or false in case of failure.
