@@ -31,7 +31,13 @@ class Dbase implements AbstractDatabase {
         return $fields;
     }
 
+    /**
+     * Retrieves record at position.
+     * Note: position starts from 1 despite of agreement use 0 for first position.
+     */
     public function getRow($position) {
-        return dbase_get_record($this->dbase, $position);
+        $result = dbase_get_record($this->dbase, $position);
+        unset($result['deleted']);
+        return array_map('trim', $result);
     }
 }
