@@ -30,9 +30,9 @@ class UnifiedDatabase {
             return self::DBASE;
         } else if (is_dir($filename)) {
             return self::PARADOX;
-        } else if (strtolower(pathinfo($filename, PATHINFO_EXTENSION)) == 'csv') {
+        } else if ($ext == 'csv') {
             return self::CSV;
-        } else if (strtolower(pathinfo($filename, PATHINFO_EXTENSION)) == 'db') {
+        } else if ($ext == 'db') {
             return self::FILEPRO;
         } else {
             return false;
