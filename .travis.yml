@@ -9,6 +9,7 @@ php:
   
 before_script:
   - composer install
+  - pecl install dbase
   
 script: vendor/bin/phpunit --coverage-clover=coverage.clover tests/
 
