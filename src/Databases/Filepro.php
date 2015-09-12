@@ -20,7 +20,7 @@ class Filepro implements AbstractDatabase {
     public function getFields() {
         $count = filepro_fieldcount();
         $fields = array();
-        for ($i = 0; $i < $fields; $i++)
+        for ($i = 0; $i < $count; $i++)
             $fields[] = (object)array(
                 'name' => filepro_fieldname($i),
                 'type' => filepro_fieldtype($i),
