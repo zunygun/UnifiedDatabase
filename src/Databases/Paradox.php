@@ -8,7 +8,7 @@ class Paradox implements AbstractDatabase {
     public function __construct($filename) {
         $this->paradox = px_new();
         $this->px_file = fopen($filename, 'rb');
-        px_open_fp($this->px_obj, $this->px_file);
+        px_open_fp($this->paradox, $this->px_file);
     }
 
     public function __destruct() {
