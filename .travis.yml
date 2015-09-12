@@ -6,4 +6,7 @@ php:
   - 7
   - hhvm
   
+before_script:
+  - composer install
+  
 script: phpunit tests/
