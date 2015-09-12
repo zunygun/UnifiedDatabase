@@ -1,7 +1,7 @@
 # UnifiedDatabase
 Unified interface to simple database files (dbase, paradox, filepro and csv).
 
-[![Latest Stable Version](https://poser.pugx.org/wapmorgan/unified-database/v/stable)](https://packagist.org/packages/wapmorgan/unified-database) [![Latest Unstable Version](https://poser.pugx.org/wapmorgan/unified-database/v/unstable)](https://packagist.org/packages/wapmorgan/unified-database) [![License](https://poser.pugx.org/wapmorgan/unified-database/license)](https://packagist.org/packages/wapmorgan/unified-database) [![Build Status](https://travis-ci.org/wapmorgan/UnifiedDatabase.svg?branch=master)](https://travis-ci.org/wapmorgan/UnifiedDatabase)
+[![Latest Stable Version](https://poser.pugx.org/wapmorgan/unified-database/v/stable)](https://packagist.org/packages/wapmorgan/unified-database) [![Latest Unstable Version](https://poser.pugx.org/wapmorgan/unified-database/v/unstable)](https://packagist.org/packages/wapmorgan/unified-database) [![License](https://poser.pugx.org/wapmorgan/unified-database/license)](https://packagist.org/packages/wapmorgan/unified-database) [![Build Status](https://travis-ci.org/wapmorgan/UnifiedDatabase.svg?branch=master)](https://travis-ci.org/wapmorgan/UnifiedDatabase) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/wapmorgan/UnifiedDatabase/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/wapmorgan/UnifiedDatabase/?branch=master)
 
 Supported databases:
 * DBase format (*.dbf files) - `UnifiedDatabase::DBASE`
