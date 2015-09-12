@@ -25,7 +25,8 @@ class UnifiedDatabase {
     }
 
     public static function detectFormat($filename) {
-        if (BinaryFile::checkSignature($filename, 0, array(0x4F, 0x50, 0x4C, 0x44, 0x61, 0x74, 0x61, 0x62))) {
+        $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+        if ($ext == 'dbf') {
             return self::DBASE;
         } else if (is_dir($filename)) {
             return self::PARADOX;
